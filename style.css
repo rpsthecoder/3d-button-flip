@@ -1,0 +1,127 @@
+#gridWrapper{
+  margin: auto;
+	height: 500px;
+	width: 500px;
+  font-family: "bookman old style";
+}
+p{
+  font-size: 10pt;
+}
+.misc
+{
+  font-size: 9pt;
+}
+h2{
+  margin-bottom: 0;
+}
+a:link{
+  color:#0095DD;
+}
+.flipBtnWrapper{
+  width: 40%;
+  height: 40%;
+  position: relative;
+  float: left;
+  margin: 6% 4%;
+}
+.flipBtn, .flipBtn_checkbox, .flipBtn_face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.flipBtn {    
+  transition: transform 2s;  
+  transform-style: preserve-3d;  
+  pointer-events: none;
+  box-shadow: 0px 0px 4px #C7C7C7;
+}
+.flipBtnWrapper:hover >  .flipBtn{
+   box-shadow: 0px 0px 4px #828282;
+}
+.flipBtn_back{  
+  transform:  translateZ( -10px );
+}
+.flipBtn_front{
+  transform: translateZ( 10px );
+  backface-visibility: hidden;
+}
+.flipBtn_back, .flipBtn_front{
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flipBtn_checkbox{
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Demo No 1 */
+
+.flipBtn_front.demo1{
+	background-image: url("image/css-3d-flip-button-animation-play.png"), linear-gradient(#FF6366 50%, #FEA56E);
+}
+.flipBtn_back.demo1{
+	background-image:  url("image/css-3d-flip-button-animation-pause.png"), linear-gradient(#FF6366 50%, #FEA56E);
+}
+.flipBtn_mid.demo1{
+  height: 20px;  
+	background-color: #d5485a;
+  transform: rotateX(90deg);
+  top: -10px;
+}
+.flipBtn_checkbox:checked + .flipBtn.demo1{
+  transform: rotateX( -180deg );
+}
+
+/* Demo No 2 */
+
+.flipBtn_front.demo2{
+	background-image: url("image/css-3d-flip-button-animation-close.png"), linear-gradient(#27B89B 50%, #45C765);
+}
+.flipBtn_back.demo2{
+	background-image:  url("image/css-3d-flip-button-animation-open.png"), linear-gradient(#27B89B 50%, #45C765);
+}
+.flipBtn_mid.demo2{
+  height: 20px;  
+	background-color: #34964c;
+  transform: rotateX(-90deg);
+  bottom: -10px;
+}
+.flipBtn_checkbox:checked + .flipBtn.demo2{
+  transform: rotateX( 180deg );
+}
+
+/* Demo No 3 */
+
+.flipBtn_front.demo3{
+	background-image: url("image/css-3d-flip-button-animation-mute.png"), linear-gradient(#27B89B 50%, #45C765);
+}
+.flipBtn_back.demo3{
+	background-image:  url("image/css-3d-flip-button-animation-speaker.png"), linear-gradient(#27B89B 50%, #45C765);
+}
+.flipBtn_mid.demo3{
+  width: 20px;
+	background-color: #34964c;
+  transform: rotateY(90deg);
+  right: -10px;
+}
+.flipBtn_checkbox:checked + .flipBtn.demo3{
+  transform: rotateY( -180deg );
+}
+
+/* Demo No 4 */
+
+.flipBtn_front.demo4{
+	background-image: url("image/css-3d-flip-button-animation-minus.png"), linear-gradient(#FF6366 50%, #FEA56E);
+}
+.flipBtn_back.demo4{
+	background-image:  url("image/css-3d-flip-button-animation-plus.png"), linear-gradient(#FF6366 50%, #FEA56E);
+}
+.flipBtn_mid.demo4{
+  width: 20px;
+	background-color: #d5485a;
+  transform: rotateY(-90deg);
+  left: -10px;
+}
+.flipBtn_checkbox:checked + .flipBtn.demo4{
+  transform: rotateY( 180deg );
+}
